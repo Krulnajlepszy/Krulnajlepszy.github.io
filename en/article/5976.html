@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="pl" prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
+<head>
+<script>
+        var country_code = "pl";
+        var language_code = "pl";
+    </script>
+<script type="text/javascript">
+        function reportAffiliateData() {
+            var activeGroups = window.OptanonActiveGroups || "";
+            var data = {};
+
+            var queryString = window.location.search.replace(/^\?/, "");
+            var queryPairs = queryString.split("&");
+            var searchParams = {};
+
+            queryPairs.forEach(function(pair) {
+                var parts = pair.split("=");
+
+                if (parts.length === 2) {
+                    searchParams[parts[0]] = parts[1];
+                }
+            });
+
+            data.marketing = /c0004/i.test(activeGroups);
+            data.affiliate = searchParams.affiliate;
+            data.irclickid = searchParams.irclickid;
+            data.queryString = queryString;
+
+            if (!data.marketing) {
+                 $.ajax(
+                    "/" + language_code + "/revoke_cookie_consent",
+                    {
+                        contentType: "application/json",
+                        type: "POST",
+                        data: JSON.stringify(data),
+                        dataType: "json",
+                        timeout: 30000,
+                        error: function() {},
+                        success: function() {}
+                    }
+                );
+            }
+
+            if ((data.irclickid || data.affiliate) && !data.marketing) {
+                return;
+             }
+
+            if (data.affiliate || data.irclickid) {
+                $.ajax(
+                    "/" + language_code + "/cookie_consent",
+                    {
+                        contentType: "application/json",
+                        type: "POST",
+                        data: JSON.stringify(data),
+                        dataType: "json",
+                        timeout: 30000,
+                        error: function() {},
+                        success: function() {}
+                    }
+                );
+            }
+        }
+    </script>
+
+<script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" type="text/javascript" charset="UTF-8" data-domain-script="651b5265-0bc8-41b4-a67c-d65f4bd27f8e"></script>
+<script type="text/javascript">
+            var minor = false;
+            var customWrapperTriggered = false;
+
+            // The wrapper will be called automatically by the OneTrust SDK
+            // when it has finished loading, on every page event though a value
+            // has already been selected in the banner.
+            window.OptanonWrapper = function() {
+                if (minor) {
+                    if (customWrapperTriggered) {
+                        return;
+                    }
+
+                    customWrapperTriggered = true;
+
+                    // Reject all cookie selection through the OneTrust SDK.
+                    window.OneTrust.RejectAll();
+                }
+
+                reportAffiliateData();
+            }
+        </script>
+
+<script>
+            window.dataLayer = [];
+            window.dataLayer.push({'xCountry': 'pl'})
+        </script>
+<script type="text/javascript" src="../../js/gtm-helper.js"></script>
+
+
+
+
+<script>
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-P52GWKP');
+    </script>
+
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+<meta name="yandex-verification" content="70ed091519a85b0a" />
+<meta name="description" content="Hi StarFam! 
+
+We’ve put together a few rules to make sure that all players have the best Star Stable Online experience possible! Breaking these rules can lead to a player re...">
+<meta name="google-site-verification" content="bmLAh9tJSXjh3UB_lDpdBqbaExpn_0dR3t_IreeHW48" />
+<title>Star Stable Online Official Rules! | Star Stable</ti<!--tle>
+<base href="https://www.starstable.com/pl/" />-->
+<link rel="icon" type="image/png" sizes="48x48" href="../../images/favicon-48.png">
+<link rel="icon" type="image/png" sizes="96x96" href="../../images/favicon-96.png">
+<link rel="icon" type="image/png" sizes="144x144" href="../../images/favicon-144.png">
+<link rel="icon" type="image/png" sizes="192x192" href="../../images/favicon-192.png">
+<script type="application/ld+json">
+        {
+            "@content": "http://schema.org",
+            "@type": "VideoGame",
+            "@name": "Star Stable Online",
+            "@url": "https://www.starstable.com/",
+            "@description": "Star Stable Online is a massively multiplayer online role-playing game created by the Swedish developer Star Stable Entertainment AB. The game is set on the fictional island of Jorvik, where the player gets their own horse to ride and care for, while solving quests and mysteries. Players can form riding clubs, take part in competitions, and talk to each other through the in-game chat. Star Stable Online is free to try up to level 5, after which players must buy a subscription called Star Rider. The game is updated with new content every Wednesday.",
+            "@genre": ["MMORPG", "MMO", "Fantasy"],
+            "@image": "https://www.starstable.com/images/seo/poster.jpg",
+            "@screenshot": "https://www.starstable.com/images/seo/background.jpg",
+            "@sameAs": ["https://sv.wikipedia.org/wiki/Star_Stable_Online", "https://www.youtube.com/channel/UCPo4aWm6slfBmhMvmKaf-xQ"],
+            "@trailer":{
+                "@type": "VideoObject",
+                "@url": "https://www.youtube.com/watch?v=vkKNTEbxN7U&t="
+            }
+        }
+    </script>
+<link rel="stylesheet" type="text/css" href="../../css/webfonts-b4593e|.css">
+<link rel="stylesheet" type="text/css" href= "../../css/base-6047ec.css" />
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Star Stable Online Official Rules!">
+<meta name="twitter:description" content="Hi StarFam! 
+
+We’ve put together a few rules to make sure that all players have the best Star Stable Online experience possible! Breaking these rules can lead to a player re...">
+<meta name="twitter:image" content="https:/www.starstable.com/https:/news-uploads.starstable.com/GameRules/gamerulesheader.jpg">
+</head>
+<body lang="pl">
+
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P52GWKP"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<header>
+<nav class="global-menu">
+<ul class="nav pull-right">
+<li class="global-menu-item"><a class="shop_gate" href="https://shop.starstable.com" title="Sklep">Sklep <span><svg xmlns="http://www.w3.org/2000/svg" class="store-icon"><path d="M12.32715,7.14258a.70653.70653,0,0,0,.66895-.47852l1.5127-4.43164a.70689.70689,0,0,0-.66895-.93555H5.48438a.707.707,0,0,0,0,1.41406h7.36719L11.82129,5.72852H5.08319L3.6582.52051A.70764.70764,0,0,0,2.97656,0h-2.27a.707.707,0,0,0,0,1.41406h1.731L3.81738,6.458,3.36572,8.61523a.70786.70786,0,0,0,.69189.85156h.934a.74116.74116,0,1,0,.04358,0h5.98828a.74116.74116,0,1,0,.04358,0h1.26013a.707.707,0,1,0,0-1.41406H4.92725L5.118,7.14258Z"></path></svg></span> </a></li>
+<li class="global-menu-item"><a class="gtm-tracking" href="https://www.starstable.com/pl/help" title="Pomoc" data-gtm-category="Header link" data-gtm-action="help" data-gtm-label=Pomoc>Pomoc</a></li>
+<li class="global-menu-item"><a class="gtm-tracking" href="../../pl/parents.html" title="Rodzice" data-gtm-category="Header link" data-gtm-action="parents" data-gtm-label=Rodzice>Rodzice</a></li>
+<li class="global-menu-item dropdown"><a href="" class="dropdown-toggle" data-toggle="dropdown" title="Język" id="language_toggle">Język <span class="caret"></span></a>
+<ul id="language_list" class="dropdown-menu">
+<li><a href="../index.html" class="language-switch small ">English</a></li>
+<li><a href="../../se.html" class="language-switch small ">Svenska</a></li>
+<li><a href="../../de.html" class="language-switch small ">Deutsch</a></li>
+<li><a href="../../es.html" class="language-switch small ">Español</a></li>
+<li><a href="../../no.html" class="language-switch small ">Norsk</a></li>
+<li><a href="../../fr.html" class="language-switch small ">Français</a></li>
+<li><a href="../../ru.html" class="language-switch small ">Русский</a></li>
+<li><a href="../../nl.html" class="language-switch small ">Nederlands</a></li>
+<li><a href="../../hu.html" class="language-switch small ">Magyar</a></li>
+<li><a href="../../it.html" class="language-switch small ">Italiano</a></li>
+<li><a href="../../pl.html" class="language-switch small active">Polski</a></li>
+<li><a href="../../pt.html" class="language-switch small ">Português</a></li>
+<li><a href="../../fi.html" class="language-switch small ">Suomi</a></li>
+<li><a href="../../da.html" class="language-switch small ">Dansk</a></li>
+</ul>
+</li>
+</ul>
+</nav>
+<nav class="top-bar">
+<ul class="navbar-dropdown">
+<div class="nav-section nav-main">
+<li><a class="menu-link" href="../../pl.html#game" title="Gra" data-id="game">Gra</a></li>
+<li><a class="menu-link menu-news" href="../../pl/news.html" title="Aktualności " data-id="news">Aktualności </a></li>
+<li><a class="menu-link" href="../../pl.html#apps" title="Aplikacje" data-id="apps">Aplikacje</a></li>
+<li><a class="menu-link" href="../../pl/star-rider.html" title="Star Rider" data-id="starrider">Star Rider</a></li>
+<li><a class="menu-link" href="../../pl/ride-with-us.html" title="Społeczność" data-id="community">Społeczność</a></li>
+<li class="menu-btn"><a class="btn btn-white btn-fixed gtm-tracking" href="../../pl/signup.html" title="Graj teraz" id="get_game" data-gtm-category="Registration" data-gtm-action="register" data-gtm-label=Graj teraz>Graj teraz</a></li>
+<li class="menu-btn"><a class="btn btn-white btn-fixed" href="../../pl/myaccount/login.html" title="Zaloguj się">Zaloguj się</a></li>
+<li><a class="shop_gate" href="https://shop.starstable.com" title="Sklep">Sklep </a></li>
+<li><a class="gtm-tracking" href="https://www.starstable.com/pl/help" title="Pomoc" data-gtm-category="Header link" data-gtm-action="help" data-gtm-label=Pomoc>Pomoc</a></li>
+<li><a class="gtm-tracking" href="../../pl/parents.html" title="Rodzice" data-gtm-category="Header link" data-gtm-action="parents" data-gtm-label=Rodzice>Rodzice</a></li>
+<li class="dropdown"><a href="" class="dropdown-toggle" data-toggle="dropdown" title="Język" id="language_toggle">Język <span class="caret"></span></a>
+<ul id="language_list" class="dropdown-menu">
+<li><a href="../index.html" class="language-switch ">English</a></li>
+<li><a href="../../se.html" class="language-switch ">Svenska</a></li>
+<li><a href="../../de.html" class="language-switch ">Deutsch</a></li>
+<li><a href="../../es.html" class="language-switch ">Español</a></li>
+<li><a href="../../no.html" class="language-switch ">Norsk</a></li>
+<li><a href="../../fr.html" class="language-switch ">Français</a></li>
+<li><a href="../../ru.html" class="language-switch ">Русский</a></li>
+<li><a href="../../nl.html" class="language-switch ">Nederlands</a></li>
+<li><a href="../../hu.html" class="language-switch ">Magyar</a></li>
+<li><a href="../../it.html" class="language-switch ">Italiano</a></li>
+<li><a href="../../pl.html" class="language-switch active">Polski</a></li>
+<li><a href="../../pt.html" class="language-switch ">Português</a></li>
+<li><a href="../../fi.html" class="language-switch ">Suomi</a></li>
+<li><a href="../../da.html" class="language-switch ">Dansk</a></li>
+</ul>
+</li>
+</div>
+</ul>
+<ul class="account-dropdown">
+<div class="nav-section nav-main">
+<li><span class="icon-avatar"></span></li>
+<li><h1>Moje konto</h1></li>
+<li><a class="" href="../../pl/myaccount/login-next_url=|myaccount|starrider.html">Star Rider</a></li>
+<li><a class="" href="../../pl/myaccount/login-next_url=|myaccount|starcoins.html">Star Coins</a></li>
+<li><a class="" href="../../pl/myaccount/login-next_url=|myaccount|recruit_a_friend.html">Zaproś przyjaciela</a></li>
+<li><a class="" href="../../pl/myaccount/login-next_url=|myaccount|redeem_code.html">Kod promocyjny</a></li>
+<li><a class="" href="../../pl/myaccount/login-next_url=|myaccount|settings.html">Ustawienia</a></li>
+</div>
+</ul>
+<div class="container">
+<div class="row">
+<a href="../../pl.html" class="logo-link pull-left">
+<img src="../../images/logo.svg" alt="Star Stable" class="logo">
+</a>
+<button type="button" class="navbar-toggle collapsed" id="navbar-toggle" data-toggle="collapse">
+<span class="icon-bar"></span>
+</button>
+<nav class="top-navigation">
+<ul class="nav nav-pills pull-left">
+<span class="tab-decoration"></span>
+<li><a class="menu-link" href="../../pl.html#game" title="Gra" data-id="game">Gra</a></li>
+<li><a class="menu-link menu-news" href="../../pl/news.html" title="Aktualności " data-id="news">Aktualności </a></li>
+<li><a class="menu-link" href="../../pl.html#apps" title="Aplikacje" data-id="apps">Aplikacje</a></li>
+<li><a class="menu-link" href="../../pl/star-rider.html" title="Star Rider" data-id="starrider">Star Rider</a></li>
+<li><a class="menu-link" href="../../pl/ride-with-us.html" title="Społeczność" data-id="community">Społeczność</a></li>
+</ul>
+</nav>
+<nav class="top-actions pull-right">
+<ul class="nav nav-pills pull-right">
+<li><a class="btn btn-white btn-fixed gtm-tracking" href="../../pl/signup.html" title="Graj teraz" id="get_game" data-gtm-category="Registration" data-gtm-action="register" data-gtm-label=Graj teraz">Graj teraz</a></li>
+<li><a class="btn btn-white btn-fixed login-btn" href="../../pl/myaccount/login.html" title="Zaloguj się">Zaloguj się</a></li>
+</ul>
+</nav>
+</div>
+</div>
+</nav>
+</header>
+<div class="content ">
+<div class="container">
+<div class="row">
+<div class="responsive-image-short">
+<img src="https://news-uploads.starstable.com/GameRules/gamerulesheader.jpg" class="" alt="Star Stable Online Official Rules!" />
+ </div>
+</div>
+<div class="row ">
+<div class="col-3">
+<article class="article-content">
+<h1>Star Stable Online Official Rules!</h1>
+<div class="updated">
+8 listopada 2018
+</div>
+<p>
+<p>Hi StarFam!</p>
+<p>We’ve put together a few rules to make sure that all players have the best Star Stable Online experience possible! Breaking these rules can lead to a player receiving a warning, being suspended from the in-game chat, or in some cases being permanently banned from the game. </p><br />
+<span style="color:#b82f61;">★</span> Never give out any personal information to other players. This includes your name, your age, where you live, your parents' names, your school name, social media accounts, etc. <br />
+<span style="color:#b82f61;">★</span> Never ask another player for personal information, even their name or age! <br />
+<span style="color:#b82f61;">★</span> Never share your password with anyone (even your best friends!), apart from your parent or guardian. <br />
+<span style="color:#b82f61;">★</span> Never share your payment or credit card information! <br />
+<span style="color:#b82f61;">★</span>Do not ask others to use, trade, or share their accounts! Sharing and selling accounts is not permitted.<br />
+<span style="color:#b82f61;">★</span> No discussion of outside programs or websites is allowed, including social media platforms such as Skype, Facebook, Instagram, etc. <br />
+<span style="color:#b82f61;">★</span> Bad words, even if you’re joking or messing around with your friends, are not allowed in the chat. <br />
+<span style="color:#b82f61;">★</span> Cheating of any kind is not allowed! <br />
+<span style="color:#b82f61;">★</span> Asking for or offering Star Coins or Star Rider memberships is not allowed in the chat. <br /> <br />
+<span style="color:#b82f61;">★</span> Hate speech or any language regarding illegal activity is not allowed. <br />
+<span style="color:#b82f61;">★</span> No spamming or flooding the chat! <br />
+<span style="color:#b82f61;">★</span> No sexually explicit or dating related conversation is allowed. This includes romance or dating related role play games.<br />
+<span style="color:#b82f61;">★</span> No bullying, threatening, or insulting other players. Always be kind to others online! <br />
+<span style="color:#b82f61;">★</span> Tell your parent or guardian right away if someone online is bullying you or making you feel uncomfortable in any way. <br /> <br />
+<span style="color:#b82f61;">★</span> If you do receive a warning or discipline, remember that the chat filter can have a delay of up to 30 minutes, so it might not be the last thing you said that caused you to get a warning/discipline! Also, remember that the chat filter can take your previous actions in the chat into account. This means that warnings/disciplines are not always based on only ONE thing that you said or did. <br />
+<span style="color:#b82f61;">★</span> Be safe and enjoy the game! <br /> <br />
+<p>For a more extensive list of Star Stable rules, see our Terms and Conditions and Privacy Policy. </p><br />
+<p>Hugs from your Star Stable Team ♥</p>
+</p>
+</article>
+</div>
+<div class="col-1">
+<div class="extra-panel">
+<form method="GET" action="news/" class="search-header">
+<input type="text" name="q" placeholder="Szukaj" />
+<button class="btn-search" type="submit">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24.89275 24.42834"><path d="M1.77123,15.18275a10.14117,10.14117,0,0,0,13.854,2.44338l6.381,6.31651a1.72219,1.72219,0,0,0,2.37489.02155q.02418-.02255.04741-.04608a1.60633,1.60633,0,0,0-.01441-2.27165L18.03312,15.33a9.46833,9.46833,0,0,0-.97181-12.43309,10.16336,10.16336,0,0,0-14.0798-.12652A9.47055,9.47055,0,0,0,1.77123,15.18275ZM5.258,14.15422Q5.16578,14.064,5.07733,13.97a6.26789,6.26789,0,0,1,.26747-8.8601,6.71942,6.71942,0,0,1,9.30875.08432q.09223.09022.18068.18418a6.26789,6.26789,0,0,1-.26747,8.8601A6.71942,6.71942,0,0,1,5.258,14.15422Z" fill="#80adb9"></path></svg>
+</button>
+<button class="btn-clear-search">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11.04346 11.04346"><path d="M7.13708,5.52136l3.57166-3.57166A1.14232,1.14232,0,0,0,9.09351.334l-3.57178,3.572L1.95.334A1.14232,1.14232,0,0,0,.33472,1.94971L3.90637,5.52136.33472,9.09326A1.14214,1.14214,0,1,0,1.95,10.7085L5.52173,7.13672,9.09351,10.7085a1.14214,1.14214,0,1,0,1.61523-1.61523Z" fill="#80adb9"></path></svg>
+</button>
+</form>
+</div>
+<div class="extra-panel">
+<div class="apps-wrapper">
+<h4>Otrzymuj wiadomości na telefon komórkowy</h4>
+<img src="../../images/apps/friends.jpg" class="btn-app-icon" alt="Star Stable Friends" />
+<div class="app-store-btn-container">
+<a href="https://itunes.apple.com/app/star-stable-friends/id1126342372?mt=8">
+<img src="../../images/apps/play-game-ios-pl.svg" class="btn-app-store">
+</a>
+<a href="https://play.google.com/store/apps/details?id=com.starstable.friends">
+<img src="../../images/apps/play-game-android-pl.png" class="btn-app-store android pl">
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-4">
+<div class="latest-news">
+<h2>Najnowsze wiadomości</h2>
+</div>
+</div>
+</div>
+<div class="row-uniform articles article-wrapper">
+<div class="col-2">
+<article class="article">
+<a href="../../pl/article/12967.html">
+<div class="media-image">
+<div class="responsive-image">
+<div class="delayed-image-load" data-src="https://s3.eu-central-1.amazonaws.com/newseditor-raw.prod.starstable.com/Update-577/header577.jpg" data-alt="Oferty czarnopiątkowe oraz nowe zadanie fabularne!">
+</div>
+</div>
+</div>
+<div class="article-text">
+<h2>Oferty czarnopiątkowe oraz nowe zadanie fabularne!</h2>
+<div class="updated">
+23 listopada 2022
+</div>
+<div class="item-content">
+<p class="lead">
+Hej! Jakie sekrety kryje Fort Maria? Dołącz do Jeźdźców Duszy, by się dowiedzieć!
+Nowe zadanie fabularne!
+Choć w bibliotekach zwykle jest mnóstwo informacji, to biblioteka...
+</p>
+<span class="read-more">
+Dowiedz się więcej
+</span>
+</div>
+</div>
+</a>
+</article>
+</div>
+<div class="col-2">
+<article class="article">
+<a href="../../pl/article/12953.html">
+<div class="media-image">
+<div class="responsive-image">
+<div class="delayed-image-load" data-src="https://s3.eu-central-1.amazonaws.com/newseditor-raw.prod.starstable.com/login-queue/header_queue.jpg" data-alt="Nasza nowa kolejka logowania jest teraz dostępna dla wszystkich serwerów!">
+</div>
+</div>
+</div>
+<div class="article-text">
+<h2>Nasza nowa kolejka logowania jest teraz dostępna dla wszystkich serwerów!</h2>
+<div class="updated">
+21 listopada 2022
+</div>
+<div class="item-content">
+<p class="lead">
+„Kolejka? To nie brzmi zbyt fajnie!” – być może tak właśnie myślisz. „Nie chcę czekać w kolejce!”
+Ale spokojnie, bo nasz nowy system kolejki logowania sprawi, że dołączan...
+</p>
+<span class="read-more">
+Dowiedz się więcej
+</span>
+</div>
+</div>
+</a>
+</article>
+</div>
+<div class="col-2">
+<article class="article">
+<a href="../../pl/article/12930.html">
+<div class="media-image">
+<div class="responsive-image">
+<div class="delayed-image-load" data-src="https://s3.eu-central-1.amazonaws.com/newseditor-raw.prod.starstable.com/Update-576/header576_1.jpg" data-alt="Postaw wszystko na belgijskiego konia gorącokrwistego!">
+</div>
+</div>
+</div>
+<div class="article-text">
+<h2>Postaw wszystko na belgijskiego konia gorącokrwistego!</h2>
+<div class="updated">
+16 listopada 2022
+</div>
+<div class="item-content">
+<p class="lead">
+Hej! Nawiązaliśmy współpracę z H&M We Love Horses, by zapewnić Ci nowy wyścig i niezwykle wyjątkowego konia. A dodatkowo zawitał do nas belgijski koń gorącokrwisty!
+Belgijs...
+</p>
+<span class="read-more">
+Dowiedz się więcej
+</span>
+</div>
+</div>
+</a>
+</article>
+</div>
+<div class="col-2">
+<article class="article">
+<a href="../../pl/article/12898.html">
+<div class="media-image">
+<div class="responsive-image">
+<div class="delayed-image-load" data-src="https://s3.eu-central-1.amazonaws.com/newseditor-raw.prod.starstable.com/Update-575/header575.jpg" data-alt="Powrót Hermana i KJ!">
+</div>
+</div>
+</div>
+<div class="article-text">
+<h2>Powrót Hermana i KJ!</h2>
+<div class="updated">
+9 listopada 2022
+</div>
+<div class="item-content">
+<p class="lead">
+Hej! W tym tygodniu powracają Konie Jorviku. A kto pamięta Hermana?
+Powrót Hermana
+Po niezwykle długim czasie, kiedy to Herman był na wakacjach, ratował Jorvik lub zaginął...
+</p>
+<span class="read-more">
+Dowiedz się więcej
+</span>
+</div>
+</div>
+</a>
+</article>
+</div>
+</div>
+</div>
+</div>
+<footer>
+<div class="container">
+<div class="row">
+<div class="col-4">
+<a href="../../pl.html" class="logo-footer">
+<img src="../../images/logo.svg" alt="Star Stable" class="logo">
+</a>
+<div class="footer-links small">
+<ul>
+<li><a href="https://jobs.starstable.com" title="Praca" target="_blank">Praca</a></li>
+<li><a href="https://www.starstable.com/pl/help" title="Pomoc">Pomoc</a></li>
+<li><a href="../../pl/parents.html" title="Rodzice">Rodzice</a></li>
+<li><a href="https://press.starstableentertainment.com/" title="Prasa" target="_blank">Prasa</a></li>
+</ul>
+<ul>
+<li><a href="../../pl/terms.html" title="Regulamin użytkowania">Regulamin użytkowania</a></li>
+<li><a href="../../pl/privacy.html" title="Polityka prywatności"><span>Polityka prywatności</span></a></li>
+<li><a href="../../pl/cookie-policy.html" title="Polityka Cookie">Polityka Cookie</a></li>
+<li><a href="../../pl.html#" title="Ustawienia plików cookie" onclick="event.preventDefault();" class="optanon-show-settings">Ustawienia plików cookie</li>
+<li><a href="../../pl/parents/online-safety.html" title="Ochrona i bezpieczeństwo online">Ochrona i bezpieczeństwo online</a></li>
+</ul>
+</div>
+<div class="logo-footer">
+<a href="https://cert.privo.com/#/companies/star_stable">
+<img src="../../images/privo/COPPA.png" alt="Star Stable is certified by PRIVO">
+</a>
+<a href="https://cert.privo.com/#/companies/star_stable">
+<img src="../../images/privo/GDPR.png" alt="Starstable.com is GDPR compliant">
+</a>
+</div>
+<p class="small">
+&copy; 2005-2022 Star Stable Entertainment AB
+</p>
+</div>
+</div>
+</div>
+</footer>
+<script src="../../js/jquery-1.11.0.min.js"></script>
+<script src="../../js/jquery-1.11.0.min.js"></script>
+<script src="../../js/base-_fc9961.js"></script>
+<script type="text/javascript" src="../../js/youtube-a21453.js"></script>
+<script>
+    new Imager({lazyload: true, lazyloadOffset: 250, scrollDelay: 0, availableWidths: [555, 726, 1140]});
+</script>
+</body>
+</html>

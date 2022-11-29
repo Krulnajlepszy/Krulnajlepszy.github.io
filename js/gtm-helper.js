@@ -1,0 +1,1 @@
+function pushEvent(eventType){window.dataLayer=window.dataLayer||[];window.dataLayer.push({'event':eventType});}

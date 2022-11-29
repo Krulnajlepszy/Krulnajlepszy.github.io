@@ -1,0 +1,17 @@
+Sitemap: https://www.starstable.com/sitemap.xml
+
+User-agent: *
+Disallow: /register/mobile
+Disallow: /register/thankyou
+Disallow: /offers/starrider
+Disallow: /offers/starcoin
+Disallow: /pay
+Disallow: /payment_result
+Disallow: /age_gate/verify
+Disallow: /age_gate/data
+Disallow: /myaccount/
+Disallow: /signup*
+Disallow: /backend*
+
+User-agent: *
+Allow: /

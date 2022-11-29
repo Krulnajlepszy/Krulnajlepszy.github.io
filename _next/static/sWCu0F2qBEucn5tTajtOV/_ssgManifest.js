@@ -1,0 +1,1 @@
+self.__SSG_MANIFEST=new Set(["\u002F","\u002F404","\u002F[...slug]","\u002Fsignup\u002Fthankyou","\u002Fwildwoods-herds","\u002Fwildwoods-herds\u002F[herd]"]);self.__SSG_MANIFEST_CB&&self.__SSG_MANIFEST_CB()

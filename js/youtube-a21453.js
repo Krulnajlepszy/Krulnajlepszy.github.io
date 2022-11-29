@@ -1,0 +1,2 @@
+var iframe=$('iframe');var youtube_params=['showinfo=0','controls=0','rel=0','fs=0',];$(document).ready(function(){if(iframe.length>0){var video_link=iframe.prop('src');if(video_link.indexOf('youtube')>0){var new_link=add_parameter(video_link,youtube_params);iframe.prop('src',new_link);}}});function add_parameter(link,param){var new_link=link;new_link=new_link.indexOf('?')==-1?new_link=new_link+'?':new_link;for(var i=0;i<param.length;i++){if(new_link.indexOf(param[i])==-1){new_link=new_link+'&'+param[i];}}
+return new_link;}
